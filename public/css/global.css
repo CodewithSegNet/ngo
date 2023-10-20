@@ -1,0 +1,177 @@
+*, 
+*::before,
+*::after{
+    box-sizing: inherit;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+    transition: all 200ms linear;
+}
+
+html{
+    font-size: 100%; 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-width: 376px;
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family:  'Be Vietnam Pro', sans-serif;
+    overflow-x: hidden;
+    color: #fff;
+}
+
+h1{
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    font-family:  'Be Vietnam Pro', sans-serif;
+}
+
+
+.box-margin{
+margin-bottom: 5rem;
+}
+
+img{
+max-width: 100%;
+height: auto;
+display: block;
+}
+
+.line{
+    border-color: #fff;
+    }
+
+.short-line{
+    width: 70%;
+}
+
+.short-line-black{
+    width: 100%;
+    border-color: #333;
+}
+
+.margin-t{
+    margin-top: 6rem;
+}
+
+.padding-t-b{
+    padding: 6rem 0;
+}
+
+.box{
+    min-height: 90vh;
+  }
+
+.box-1{
+    min-height: 70vh;
+}
+
+
+.box-2{
+    min-height: 100vh;
+  }
+
+  .card {
+    transition: transform 0.2s;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+
+  .text-center-underline {
+    text-decoration: underline;
+  }
+
+
+/* Add this CSS to hide the elements initially */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+
+
+/* Add this CSS to hide the elements initially and define the animation */
+.fade-in-alt {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .fade-in-alt.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Define the fade-in animation */
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+  /* Initial state: content hidden */
+.content-hidden {
+    opacity: 0;
+    transform: translateY(20px); 
+    transition: opacity 1.5s ease, transform 1s ease;
+  }
+  
+  
+/* Animated state: content visible */
+.content-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+/* Initial state: content hidden */
+.fade-in-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  /* Animated state: content visible */
+  .fade-in-card.active {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+
+  
+
+  /* Initial state: content hidden */
+.fade-in-side {
+    opacity: 0;
+    transform: translateX(-50px); 
+    transition: opacity 1.5s linear, transform 1s linear;
+  }
+  
+  .fade-in-side.active {
+    opacity: 1;
+    transform: translateX(0); 
+  }
+  
+  
+
+
+
+
+
+
+

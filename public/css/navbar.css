@@ -1,0 +1,42 @@
+/* .custom-navbar{
+  padding: 1.5rem 0;
+} */
+
+.dropdown-menu-black {
+  background: linear-gradient(rgba(155, 96, 28, 0.72), rgba(69, 12, 12, 0.5));
+  color: white;
+  border: non;
+}
+
+.nav-item a{
+  color: #fff;
+}
+
+.nav-item a:hover{
+  color: #333;
+}
+
+.dropdown-menu-black a .dropdown-item {
+  color: #333;
+  transition: none; 
+}
+
+.dropdown-menu-black a .dropdown-item:hover {
+  background-color: #333; 
+  color: #fff;
+}
+
+
+.logo{
+  max-width: 170px; 
+  max-height: 90px;
+}
+
+.gradient-background {
+  background: linear-gradient(rgba(155, 96, 28, 0.72), rgba(69, 12, 12, 0.5));
+  transition: background 0.3s ease-in-out;
+  backdrop-filter: blur(5px); 
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}

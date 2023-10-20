@@ -1,0 +1,182 @@
+/* .homepage {
+    background-image: url(''); 
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+  } */
+
+  .homepage {
+    position: relative;
+    padding-top: 80px;
+  }
+
+  .homepage::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(155, 96, 28, 0.72), rgba(69, 12, 12, 0.5)), url('/images/first.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+  main.box {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 50px;
+  }
+
+
+  .second-container{
+    color: #333;
+  }
+
+  .third-container {
+    position: relative;
+     background-image: url('/images/IMG-20231004-WA0007.jpg'); 
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .third-container:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.881), rgba(223, 215, 215, 0.743));
+    background-size: cover;
+    z-index: 0;
+  }
+  
+
+
+  /* .third-container{
+    background-image: url('/images/IMG-20231004-WA0008.jpg'); 
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+   
+  } */
+
+  .third-container h2{
+    /* background: linear-gradient(rgba(155, 96, 28, 0.72), rgba(69, 12, 12, 0.5));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; */
+    color: #333;
+    font-weight: 700;
+    font-family:  'Be Vietnam Pro', sans-serif;
+    position: relative;
+    z-index: 1;
+    padding-top: 6rem;
+  }
+
+  .fourth-container{
+    position: relative;
+    background-image: url('/images/volunteer.jpg'); 
+   background-size: cover;
+   background-attachment: fixed;
+   background-position: center center;
+   background-repeat: no-repeat;
+   z-index: 1;
+  }
+
+  .fourth-container h2 p{
+    position: relative;
+    z-index: 99;
+  }
+
+  .fourth-container:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(155, 96, 28, 0.72), rgba(69, 12, 12, 0.5));
+    background-size: cover;
+    z-index: -1;
+  }
+  
+
+  .fifth-container{
+    color: #fff;
+    background: linear-gradient(rgba(155, 96, 28, 0.72), rgba(69, 12, 12, 0.62));
+  }
+
+
+  .col-md-5 h2.text-right {
+    text-align: right;
+  }
+
+  .col-md-8 p.text-right{
+    text-align: right;
+  }
+
+  #imageCarousel {
+    display: flex;
+    align-items: center; 
+    min-height: 100%; 
+  }
+
+  .new{
+   margin-top: 8rem;
+  }
+
+  .social-icon i:hover {
+   background: linear-gradient(rgba(155, 96, 28, 0.72), rgba(69, 12, 12, 0.5));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .list-unstyled a{
+    color: #fff;
+  }
+
+  .list-unstyled a:hover{
+        background: linear-gradient(rgba(155, 96, 28, 0.72), rgba(69, 12, 12, 0.5));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .sixth-container{
+    position: relative;
+    background-image: url('/images/slide4.jpg'); 
+   background-size: cover;
+   background-attachment: fixed;
+   background-position: center center;
+   background-repeat: no-repeat;
+   z-index: 1;
+  }
+
+  .sixth-container h2 p{
+    position: relative;
+    z-index: 99;
+  }
+
+  .sixth-container:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(155, 96, 28, 0.72), rgba(69, 12, 12, 0.5));
+    background-size: cover;
+    z-index: -1;
+  }
+  
+
