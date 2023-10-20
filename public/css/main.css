@@ -25,6 +25,11 @@
     z-index: -1;
   }
 
+  .homepage p{
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
   main.box {
     position: relative;
     z-index: 1;
