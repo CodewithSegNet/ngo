@@ -46,6 +46,11 @@
       font-family:  'Be Vietnam Pro', sans-serif;
   }
 
+  .third-container h2{
+    padding-top: 15rem;
+    padding-bottom: 4rem;
+  }
+
 
     .container{
       padding: 0 .8rem;
@@ -63,6 +68,7 @@
 
     .p-down{
         padding-bottom: 2rem;
+        padding-top: 3rem;
       }
 
       .logo{
