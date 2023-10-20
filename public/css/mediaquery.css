@@ -40,10 +40,14 @@
 /* mobile Screen */
   @media (max-width: 770px) {
     h1{
-      font-size: 2rem;
-      font-weight: 700;
+      font-size: 1.5rem;
+      font-weight: 500;
       line-height: 1.2;
       font-family:  'Be Vietnam Pro', sans-serif;
+  }
+
+ .homepage p{
+font-size: .8rem;
   }
 
   .third-container h2{
