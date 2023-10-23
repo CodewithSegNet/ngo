@@ -17,7 +17,7 @@ function debounce(func, wait) {
   };
 }
 
-const debouncedUpdateNavbar = debounce(updateNavbar, 100);
+const debouncedUpdateNavbar = debounce(updateNavbar, 20);
 
 // Call updateNavbar once when the document is ready to handle the initial state
 document.addEventListener('DOMContentLoaded', () => {
