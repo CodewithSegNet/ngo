@@ -36,6 +36,12 @@ h1{
     font-family: 'Oswald', sans-serif;
 }
 
+h2, h3{
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Oswald', sans-serif;
+}
+
 li{
     cursor: pointer;
 }
