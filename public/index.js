@@ -1,4 +1,4 @@
-// 1. Debounced Scroll Event
+// Debounced Scroll Event
 const navbar = document.querySelector('.navbar');
 
 function updateNavbar() {
@@ -17,7 +17,7 @@ function debounce(func, wait) {
   };
 }
 
-const debouncedUpdateNavbar = debounce(updateNavbar, 50);
+const debouncedUpdateNavbar = debounce(updateNavbar, 10);
 
 // Call updateNavbar once when the document is ready to handle the initial state
 document.addEventListener('DOMContentLoaded', () => {
@@ -58,7 +58,7 @@ function animateElements() {
     cards.forEach((card, index) => {
       setTimeout(() => {
         card.classList.add('active');
-      }, index * 400); 
+      }, 400 * index); 
     });
   }
 
@@ -66,7 +66,7 @@ function animateElements() {
     sideElements.forEach((element, index) => {
       setTimeout(() => {
         element.classList.add('active');
-      }, 500 * index);
+      }, 400 * index);
     });
   }
 
@@ -74,7 +74,7 @@ function animateElements() {
     sideAltElements.forEach((elements, index) => {
       setTimeout(() => {
         elements.classList.add('active');
-      }, 500 * index);
+      }, 400 * index);
     });
   }
 
@@ -104,7 +104,7 @@ function animateElements() {
   const observer = new IntersectionObserver(handleIntersection, {
     root: null,
     rootMargin: '0px',
-    threshold: 0.8,
+    threshold: 0.6,
   });
 
   elementsToObserve.forEach((element) => {
@@ -113,7 +113,7 @@ function animateElements() {
 
   // Observe the section to trigger the card animation
   const section = document.querySelector('.third-container');
-  observer.observe(section);
+
 
   // Observe elements to trigger the side element animation
   sideElements.forEach(element => {
@@ -126,7 +126,7 @@ function animateElements() {
       if (entry.isIntersecting) {
         revealCards();
         revealSideElements();
-        delayElements();
+        // delayElements();
         revealSideAltElements()
         sectionObserver.unobserve(entry.target);
       }
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
     elements.forEach((element, index) => {
       setTimeout(() => {
         element.classList.add('active');
-      }, 700 * index);
+      }, 400 * index);
     });
   }
   
@@ -164,5 +164,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
   elements.forEach(element => {
     observer.observe(element);
+  });
+});
+
+
+
+
+ // JavaScript to control the Next and Previous buttons
+ document.addEventListener("DOMContentLoaded", function () {
+  const prevButton = document.getElementById("prevButton");
+  const nextButton = document.getElementById("nextButton");
+  const imageCarousel = document.getElementById("imageCarousel");
+
+  prevButton.addEventListener("click", function () {
+    const carousel = new bootstrap.Carousel(imageCarousel);
+    carousel.prev();
+  });
+
+  nextButton.addEventListener("click", function () {
+    const carousel = new bootstrap.Carousel(imageCarousel);
+    carousel.next();
   });
 });

@@ -30,6 +30,33 @@
     font-weight: 500;
   }
 
+
+  .homepage2 {
+    position: relative;
+    padding-top: 80px;
+  }
+
+  .homepage2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(155, 96, 28, 0.72), rgba(69, 12, 12, 0.5));
+    background-size: cover;
+    /* background-position: center center; */
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+  .homepage2 p{
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+
+
   main.box {
     position: relative;
     z-index: 1;
@@ -98,6 +125,16 @@
     z-index: 99;
   }
 
+  .fourth-container h2{
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    font-weight: 300;
+  }
+
+  .fourth-container p{
+    font-size: 1.5rem;
+  }
+
   .fourth-container:before{
     content: "";
     position: absolute;
@@ -110,6 +147,30 @@
     background-repeat: no-repeat;
     z-index: -1;
   }
+  
+
+   .fourth-container{
+    color: #fff;
+    padding: 0 3rem;
+   }
+
+   .volunteer{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+   }
+
+.space{
+  margin-right: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  background-color: #333;
+}
+
+.contact{
+  background-color: #333;
+}
+
+
   
 
   .fifth-container{
@@ -146,6 +207,9 @@
 
   .list-unstyled a{
     color: #fff;
+    text-decoration: none;
+    list-style: none;
+    
   }
 
   .list-unstyled a:hover{
@@ -157,11 +221,23 @@
 
   .sixth-container{
     position: relative;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
   }
 
   .sixth-container h2 p{
     position: relative;
     z-index: 99;
+  }
+
+  .sixth-container h2{
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    font-weight: 300;
+  }
+
+  .sixth-container p{
+  font-size: 1.5rem;
   }
 
   .sixth-container:before{
@@ -178,15 +254,53 @@
   }
   
 
-  .col-md-4:nth-child(1){
-    transition-delay: 200ms;
+
+  /* About Page */
+
+
+
+  .secpage{
+    padding-left: 0;
   }
 
-  .col-md-4:nth-child(2){
-    transition-delay: 400ms;
+
+  .secpage a{
+    font-weight: 500;
+    text-decoration: none;
+    color: #333;
   }
 
-  .col-md-4:nth-child(3){
-    transition-delay: 600ms;
+  .secpage a:hover{
+     background: linear-gradient(rgba(155, 96, 28, 0.72), rgba(69, 12, 12, 0.5));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 
+
+  .about-container{
+    color: #333;
+    background-color: #fff;
+  }
+
+  .founderImg{
+    min-height: 200px;
+    width: 200px;
+  }
+
+
+img.corimg{
+  height: 500px;
+  }
+
+  .form-img{
+    display: block;
+  }
+
+  .name{
+   text-align: center; 
+  }
+
+  .gallery{
+    width: 50%;
+  }

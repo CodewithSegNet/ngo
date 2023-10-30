@@ -17,6 +17,7 @@
   }
 
 
+ 
 
   
 
@@ -32,7 +33,38 @@
         line-height: 1.2;
         font-family:  'Be Vietnam Pro', sans-serif;
     }
+
+    .second-container{
+      padding: 0 .8rem;
     }
+
+    .third-container{
+      padding: 0 .8rem;
+    }
+
+
+.contact .row>* {
+    width: 80%;
+  }
+
+  .contact-row{
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-img{
+    display: none;
+  }
+
+  .name{
+   text-align: left; 
+  }
+
+  
+  .gallery{
+    width: 100%;
+  }
+}
 
 
 
@@ -81,11 +113,23 @@ font-size: .8rem;
       }
 
       .contact .row>* {
-        width: 50%;
+        width: 80%;
       }
 
       .footer{
         text-align: center;
       }
 
+      form{
+        padding: 20px;
+      }
+
+      .about-container{
+        padding: 0 15px;
+      }
+
+      
+  .gallery{
+    width: 100%;
+  }
   }

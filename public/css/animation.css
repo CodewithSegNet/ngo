@@ -19,13 +19,14 @@
 /* Add this CSS to hide the elements initially and define the animation */
 .fade-in-alt {
     opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 1s ease, transform 1s ease;
+    transform: translateY(50px);
+    transition: all 1s ease, transform 1s ease;
   }
   
   .fade-in-alt.active {
     opacity: 1;
     transform: translateY(0);
+    transition-delay: 200ms;
   }
 
   /* Add this CSS to hide the elements initially and define the animation */
@@ -34,7 +35,7 @@
   filter: blur(4px);
   transform: translateY(30%);
   transition: opacity 1s ease, transform 1s ease;
-  transition-delay: 3000ms;
+  transition-delay: 200ms;
 }
 
 .fade-in-delay.active {
@@ -43,15 +44,6 @@
   filter: blur(0);
 }
 
-  /* Define the fade-in animation */
-@keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
 
 
   /* Initial state: content hidden */
@@ -92,7 +84,6 @@
     filter: blur(4px);
     transform: translateX(-50%); 
     transition: opacity 1s linear, transform 1s linear;
-    transition-delay: 400ms;
   }
   
   .fade-in-side.active {
@@ -107,9 +98,8 @@
 .fade-in-side-alt {
   opacity: 0;
   filter: blur(4px);
-  transform: translateX(50%); 
+  transform: translateX(20%); 
   transition: opacity 1s linear, transform 1s linear;
-  transition-delay: 400ms;
 }
 
 .fade-in-side-alt.active {
@@ -117,5 +107,6 @@
   transform: translateX(0);
   filter: blur(0); 
 }
+
 
   
