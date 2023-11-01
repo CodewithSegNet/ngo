@@ -87,9 +87,9 @@ font-size: 1rem;
   }
 
 
-    .container{
-      padding: 0 .8rem;
-    }
+  .fourth{
+    padding: 0 1.5rem;
+  }
 
     .reverse {
       flex: 0 0 100%;
@@ -131,6 +131,10 @@ font-size: 1rem;
       
   .gallery{
     width: 100%;
+  }
+
+  .secpage {
+    padding: 0 0.8rem;
   }
 
   }

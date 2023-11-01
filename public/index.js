@@ -1,13 +1,15 @@
 // Debounced Scroll Event
 const navbar = document.querySelector('.navbar');
+let isDropdownActive = false;
 
 function updateNavbar() {
-  if (window.scrollY > 10) {
+  if (window.scrollY > 10 || isDropdownActive) {
     navbar.classList.add('gradient-background');
   } else {
     navbar.classList.remove('gradient-background');
   }
 }
+
 
 function debounce(func, wait) {
   let timeout;
@@ -23,6 +25,7 @@ const debouncedUpdateNavbar = debounce(updateNavbar, 10);
 document.addEventListener('DOMContentLoaded', () => {
   updateNavbar();
 
+
   document.addEventListener('scroll', () => {
     debouncedUpdateNavbar();
   });
@@ -31,18 +34,17 @@ document.addEventListener('DOMContentLoaded', () => {
 // Click Event for Button
 const toggleButton = document.getElementById('toggleGradientButton');
 toggleButton.addEventListener('click', () => {
-  const navbar = document.querySelector('.navbar');
-  navbar.classList.add('gradient-background');
+  isDropdownActive = !isDropdownActive; // Toggle the dropdown state
+  updateNavbar(); // Update the navbar based on the new state
 });
+
 
 // Consolidate Animation Using requestAnimationFrame
 function animateElements() {
   const fadeElements = document.querySelectorAll('.fade-in');
   const altElements = document.querySelectorAll('.fade-in-alt');
-  const delayElements = document.querySelectorAll('.fade-in-delay');
   const cards = document.querySelectorAll('.fade-in-card');
   const sideElements = document.querySelectorAll('.fade-in-side');
-  const sideAltElements = document.querySelectorAll('.fade-in-side-alt');
   const elementsToObserve = document.querySelectorAll('.content-hidden');
 
   function animateElement(element) {
@@ -70,23 +72,11 @@ function animateElements() {
     });
   }
 
-  function revealSideAltElements() {
-    sideAltElements.forEach((elements, index) => {
-      setTimeout(() => {
-        elements.classList.add('active');
-      }, 400 * index);
-    });
-  }
-
   fadeElements.forEach((element) => {
     requestAnimationFrame(() => animateElement(element));
   });
 
   altElements.forEach((element) => {
-    requestAnimationFrame(() => animateElementAlt(element));
-  });
-
-  delayElements.forEach((element) => {
     requestAnimationFrame(() => animateElementAlt(element));
   });
 
@@ -126,8 +116,6 @@ function animateElements() {
       if (entry.isIntersecting) {
         revealCards();
         revealSideElements();
-        // delayElements();
-        revealSideAltElements()
         sectionObserver.unobserve(entry.target);
       }
     });
