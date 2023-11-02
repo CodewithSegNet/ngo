@@ -94,7 +94,7 @@ function animateElements() {
   const observer = new IntersectionObserver(handleIntersection, {
     root: null,
     rootMargin: '0px',
-    threshold: 0.6,
+    threshold: 0.4,
   });
 
   elementsToObserve.forEach((element) => {

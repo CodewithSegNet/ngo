@@ -64,6 +64,13 @@
   .gallery{
     width: 100%;
   }
+
+  .last{
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+  }
+  
 }
 
 

@@ -259,6 +259,11 @@
     background-repeat: no-repeat;
     z-index: -1;
   }
+
+  .last{
+    color: #fff;
+    background-color: #333;
+  }
   
 
 
