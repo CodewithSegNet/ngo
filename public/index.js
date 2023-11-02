@@ -104,6 +104,7 @@ function animateElements() {
   // Observe the section to trigger the card animation
   const section = document.querySelector('.third-container');
 
+//Ensure that the 'section' element exists
 
   // Observe elements to trigger the side element animation
   sideElements.forEach(element => {
@@ -123,6 +124,7 @@ function animateElements() {
 
   sectionObserver.observe(section);
 }
+
 
 // Start the animations when the document is ready
 document.addEventListener('DOMContentLoaded', animateElements);
@@ -157,20 +159,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
- // JavaScript to control the Next and Previous buttons
- document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
   const prevButton = document.getElementById("prevButton");
   const nextButton = document.getElementById("nextButton");
   const imageCarousel = document.getElementById("imageCarousel");
 
-  prevButton.addEventListener("click", function () {
-    const carousel = new bootstrap.Carousel(imageCarousel);
-    carousel.prev();
-  });
+  if (prevButton && nextButton && imageCarousel) {
+    prevButton.addEventListener("click", function () {
+      const carousel = new bootstrap.Carousel(imageCarousel);
+      carousel.prev();
+    });
 
-  nextButton.addEventListener("click", function () {
-    const carousel = new bootstrap.Carousel(imageCarousel);
-    carousel.next();
-  });
+    nextButton.addEventListener("click", function () {
+      const carousel = new bootstrap.Carousel(imageCarousel);
+      carousel.next();
+    });
+  } else {
+    console.error("One or more of the required elements were not found.");
+  }
 });
