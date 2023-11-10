@@ -1,15 +1,38 @@
+#!/usr/bin/env python3
 from flask import Flask
+from config import Config
 from flask_sqlalchemy import SQLAlchemy
+from flask_cors import CORS
 
-# initializing Flask app
-app = Flask(__name__)
+# create a slqalchemy object
+db = SQLAlchemy()
+
+def create_app():
+    # Load configuration from your Config class
+    app = Flask(__name__)
+    app.config.from_object(Config)
+
+    # Initialize the database with the app
+    db.init_app(app)
 
 
-# configure and set up database uri
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://segun:SeGun@123@localhost/ngodatabase"
+    # Register the user Blueprint
+    from controller.users_controller import user_bp
+    app.register_blueprint(user_bp, url_prefix='/api')
 
-# Initialize SQLAlchemy with the app object
-db.SQLAlchemy(app)
+
+     # Configure CORS to allow requests from any origin
+    CORS(app, supports_credentials=True)
+
+
+    # create the datebase tables
+    with app.app_context():
+        db.create_all()
+
+
+    return app
 
 if __name__ == '__main__':
+    app = create_app()
+
     app.run(debug=True)
