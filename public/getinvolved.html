@@ -134,7 +134,6 @@
               <label for="education">Level of Education *</label>
               <select id="education" name="education" required>
                 <option value="none">None</option>
-                <option value="primary">Primary</option>
                 <option value="secondary">Secondary</option>
                 <option value="tertiary">Tertiary</option>
                 <option value="non-formal">Non-formal</option>
@@ -149,12 +148,24 @@
           <div class="row">
             <div class="col-md-6">
               <label for="phone_number">Phone Number *</label>
-              <input type="tel" id="phone_number" name="phone_number" required>
+              <input type="tel" id="phone_number" placeholder="+234" name="phone_number" required>
             </div>
             <div class="col-md-6">
               <label for="email">Email *</label>
               <input type="email" id="email" name="email" required>
             </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <label for="education">Position *</label>
+              <select id="position" name="position" required>
+                <option value="none">Internship</option>
+                <option value="primary">Advocate</option>
+                <option value="secondary">volunteer</option>
+              </select>
+            </div>
+           
           </div>
   
           <div class="row">

@@ -2,7 +2,7 @@ const express = require('express');
 const http = require('http');
 const bodyParser = require('body-parser');
 const reload = require('reload');
-const axios = require('axios'); // Add this line to use Axios for HTTP requests
+const axios = require('axios'); // line to use Axios for HTTP requests
 
 const app = express();
 
